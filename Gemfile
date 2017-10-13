@@ -19,4 +19,5 @@ group :development do
   gem "rspec-rails", require: false
   gem "rubocop", require: false
   gem "scss_lint", require: false
+  gem "pry-rails", require: false
 end
