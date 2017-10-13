@@ -1,0 +1,25 @@
+LineLength:
+  Max: 100
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/Copyright:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+# http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/FrozenStringLiteralComment
+# May be required for ruby 3.0
+# ex.
+#    # encoding: ASCII-8BIT
+#    # frozen_string_literal: true
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/TrailingBlankLines:
+  Enabled: true
+
+AmbiguousBlockAssociation:
+  Enabled: false
