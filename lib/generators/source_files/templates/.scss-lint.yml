@@ -1,0 +1,258 @@
+# Default application configuration that all configurations inherit from.
+
+scss_files: "app/assets/stylesheets/**/*.scss"
+
+exclude: "vendor/assets/stylesheets/*"
+
+linters:
+  # "value !important;" not "value!important ;"
+  BangFormat:
+    enabled: true
+    space_before_bang: true
+    space_after_bang: false
+
+  # "border: 0" not "border: none"
+  BorderZero:
+    enabled: true
+    convention: zero # or `none`
+
+  # "#00ff00" not "green"
+  ColorKeyword:
+    enabled: false
+
+  # allow color hexes to be used outside of variable declarations
+  ColorVariable:
+    enabled: false
+
+  # // not /**/
+  Comment:
+    enabled: false
+
+  # Disallow "@debug"
+  DebugStatement:
+    enabled: true
+
+  # @extend must come first, then properties, then nested rulesets
+  DeclarationOrder:
+    enabled: true
+
+  # Warn when the same property appears more than once in the same ruleset
+  # Case-to-case failure (review when failed), as authors may repeat properties
+  # in the case where both a value and its fallback are needed
+  DuplicateProperty:
+    enabled: true
+
+  # "} else {" not "}\n else {"
+  ElsePlacement:
+    enabled: true
+    style: same_line # or 'new_line'
+
+  # Require an empty line between rulesets
+  EmptyLineBetweenBlocks:
+    enabled: false
+    ignore_single_line_blocks: true
+
+  # Disallow empty rulesets
+  EmptyRule:
+    enabled: true
+
+  # Require a newline at the end of the file
+  FinalNewline:
+    enabled: true
+    present: true
+
+  # #fff not #fffff
+  HexLength:
+    enabled: true
+    style: short # or 'long'
+
+  # #FFF not #fff
+  HexNotation:
+    enabled: true
+    style: uppercase # or 'lowercase'
+
+  # Hex colors must be actual colors (ie not #ab or #00mm00)
+  HexValidation:
+    enabled: true
+
+  # ID Selectors are allowed
+  IdSelector:
+    enabled: false
+
+  # Don't even think about using !important
+  ImportantRule:
+    enabled: true
+
+  # "@import 'path/to/partial'" not "@import 'path/to/_partial.scss'"
+  ImportPath:
+    enabled: true
+    leading_underscore: false
+    filename_extension: false
+
+  # proper indentation
+  Indentation:
+    enabled: true
+    allow_non_nested_indentation: false
+    character: space # or 'tab'
+    width: 2
+
+  # "margin: 0.85em" not "margin: .85em"
+  LeadingZero:
+    enabled: true
+    style: include_zero # or 'exclude_zero'
+
+  # Disallow more than one ruleset with the same selector in the same file
+  MergeableSelector:
+    enabled: true
+    force_nesting: true
+
+  # variables, mixins, and function names are $red-light not $red_Light
+  NameFormat:
+    enabled: true
+    allow_leading_underscore: true
+    convention: hyphenated_lowercase # or 'BEM', or a regex pattern
+
+  # max depth of nesting selectors
+  NestingDepth:
+    enabled: true
+    max_depth: 4 # 3 is something to aspire to here
+
+  # Checks that @extend is always used with a placeholder selector
+  # Not necessary as long as you're careful to extend very small, deliberate classes or ids
+  PlaceholderInExtend:
+    enabled: false
+
+  # if enabled, will limit the number of properties in a ruleset
+  PropertyCount:
+    enabled: false
+    include_nested: false
+    max_properties: 10
+
+  # if enabled, validates property units
+  # unnecessary if we're writing our own css, as we should be
+  PropertyUnits:
+    enabled: false
+    global: ['em', 'ex', '%', 'px', 'ch', 'cm', 'mm', 'in', 'pt', 'pc', 'rem', 'vh', 'vw', 'vmin', 'vmax']
+    properties: {}
+
+  # Require properties to be in alphabetical order
+  PropertySortOrder:
+    enabled: true
+    ignore_unspecified: false
+    separate_groups: false
+
+  # disallow properties that don't exist
+  PropertySpelling:
+    enabled: true
+    extra_properties: ["font-smooth"]
+
+  # if enabled, div[class*=medium-push] is bad
+  # we can look into refactoring when we go 100% responsive,
+  # until then such fallbacks are necessary to prevent *[class*=medium-push]
+  # among other travesties
+  QualifyingElement:
+    enabled: false
+    allow_element_with_attribute: false
+    allow_element_with_class: false
+    allow_element_with_id: false
+
+  # Checks that @extend is always used with a placeholder selector
+  SelectorDepth:
+    enabled: true
+    max_depth: 4 # 3 is something to aspire to here
+
+  # .class-name OR ELSE
+  SelectorFormat:
+    enabled: true
+    convention: hyphenated_lowercase # or 'BEM', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
+
+  # margin: 1px not margin: 1px 1px 1px 1px;
+  Shorthand:
+    enabled: true
+
+  # Disallow properties on the same line "margin: 0; padding: 0;"
+  SingleLinePerProperty:
+    enabled: true
+    # enable simple rules to be on a single line "el { margin: 0; }"
+    allow_single_line_rule_sets: true
+    severity: error
+
+  # Rulesets with multiple (comma delimited) selectors
+  # must have each selector on a separate line
+  SingleLinePerSelector:
+    enabled: true
+
+  # rgb(0, 0, 0) not rgb(0,0,0)
+  SpaceAfterComma:
+    enabled: true
+
+  # "margin: 0" not "margin:0"
+  SpaceAfterPropertyColon:
+    enabled: true
+    style: one_space # or 'no_space', or 'at_least_one_space', or 'aligned'
+
+  # should techincally be called NoSpaceAfterPropertyName
+  # "margin: 0" not "margin : 0"
+  SpaceAfterPropertyName:
+    enabled: true
+
+  # ".class {" not ".class{"
+  SpaceBeforeBrace:
+    enabled: true
+    style: space # or 'new_line'
+    allow_single_line_padding: false
+
+  # rgb(0, 0, 0) not rgb( 0, 0, 0 )
+  SpaceBetweenParens:
+    enabled: true
+    spaces: 0
+
+  # use single quotes, not double quotes
+  StringQuotes:
+    enabled: false
+    style: single_quotes # or double_quotes
+
+  # Every property value must end with a semicolon
+  TrailingSemicolon:
+    enabled: true
+    severity: error
+
+  # margin: .5em not "margin: .500em"
+  TrailingZero:
+    enabled: false
+
+  # mantissa == fraction; 2 not 2.0
+  UnnecessaryMantissa:
+    enabled: true
+
+  # Disable this rule to allow parent references such as "& + * {}"
+  UnnecessaryParentReference:
+    enabled: false
+
+  # if true, urls cannot contain domains
+  UrlFormat:
+    enabled: false
+
+ # url("example.com") not url(example.com)
+  UrlQuotes:
+    enabled: false
+
+  # any property can have literal values
+  VariableForProperty:
+    enabled: false
+    properties: []
+
+  # No vendor prefixes, we use Bourbon
+  VendorPrefix:
+    enabled: true
+    identifier_list: base
+    additional_identifiers: []
+    excluded_identifiers: []
+
+  # "border: 0" not "border: 0px"
+  ZeroUnit:
+    enabled: true
+
+  # we do not use Compass framework
+  Compass::*:
+    enabled: false

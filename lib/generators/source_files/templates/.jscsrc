@@ -1,0 +1,7 @@
+{
+  "preset": "airbnb",
+  "excludeFiles": ["vendor/**", "tmp/**", "spec/**/*json.js"],
+  "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
+  "requireTrailingComma": false,
+  "disallowQuotedKeysInObjects": false
+}
