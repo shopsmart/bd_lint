@@ -8,7 +8,9 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bd_lint'
+group :development do
+  gem 'bd_lint'
+end
 ```
 
 And then execute:
@@ -19,6 +21,23 @@ $ bundle
 Or install it yourself as:
 ```bash
 $ gem install bd_lint
+```
+
+Install Pre-commit Hooks
+```bash
+$ rails g pre_commit
+```
+
+## Rake Tasks
+
+If you wish to run checks without commiting you can run the following
+```bash
+$ rake bd_lint:rvm_check
+```
+
+The command ensures checks will run on RMV
+```bash
+$ rake bd_lint:rvm_check
 ```
 
 ## Contributing
