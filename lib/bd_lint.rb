@@ -1,9 +1,11 @@
-require "bd_lint/rvm_version_check"
+require "bd_lint/railtie" if defined?(Rails)
+require "bd_lint/rvm_version"
+require "pre-commit"
 
 module BdLint
-  RvmVersionCheck.check
+  RvmVersion.check
 
   def self.run
-
+    PreCommit.run
   end
 end

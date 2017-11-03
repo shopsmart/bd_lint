@@ -1,5 +1,5 @@
 module BdLint
-  class RvmVersionCheck
+  class RvmVersion
     require "mkmf"
 
     def self.check

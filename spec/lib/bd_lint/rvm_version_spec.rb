@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe BdLint::RvmVersionCheck do
+describe BdLint::RvmVersion do
   describe "#check" do
     it "checks the rvm" do
       expect(MakeMakefile).to receive(:find_executable).with("rvm")
