@@ -10,6 +10,7 @@ Add this line to your application's Gemfile:
 ```ruby
 group :development do
   gem 'bd_lint'
+  gem "pre-commit-jscs", github: "shopsmart/pre-commit-jscs", tag: "vx.x.x", require: false
 end
 ```
 

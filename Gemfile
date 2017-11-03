@@ -14,10 +14,9 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 group :development do
-  gem "pre-commit", require: false
-  gem "pre-commit-jscs", github: "shopsmart/pre-commit-jscs", tag: "v1.0.5", require: false
+  gem "pre-commit"
   gem "rspec-rails", require: false
-  gem "rubocop", require: false
-  gem "scss_lint", require: false
+  gem "rubocop"
+  gem "scss_lint"
   gem "pry-rails", require: false
 end
