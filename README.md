@@ -18,14 +18,14 @@ And then execute:
 $ bundle
 ```
 
+Install Pre-commit Hooks (IMPORTANT!)
+```bash
+$ rails g pre_commit
+```
+
 Or install it yourself as:
 ```bash
 $ gem install bd_lint
-```
-
-Install Pre-commit Hooks
-```bash
-$ rails g pre_commit
 ```
 
 ## Rake Tasks
