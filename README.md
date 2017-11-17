@@ -21,7 +21,10 @@ $ bundle
 Install Pre-commit Hooks (IMPORTANT!)
 ```bash
 $ rails g pre_commit
+$ rails g source_files
 ```
+
+IMPORTANT! Re-generate source files each time the gem is upgraded
 
 Or install it yourself as:
 ```bash
