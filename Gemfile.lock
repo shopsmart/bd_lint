@@ -1,16 +1,11 @@
-GIT
-  remote: git://github.com/shopsmart/pre-commit-jscs.git
-  revision: b83b4f5c1cd5f1ce8b0061c3b6234ab3979ddd37
-  tag: v1.0.5
-  specs:
-    pre-commit-jscs (1.0.5)
-      pre-commit
-
 PATH
   remote: .
   specs:
-    bd_lint (0.1.0)
+    bd_lint (0.1.1)
+      pre-commit
       rails (>= 4.2.0)
+      rubocop
+      scss_lint
 
 GEM
   remote: https://rubygems.org/
@@ -171,7 +166,6 @@ PLATFORMS
 DEPENDENCIES
   bd_lint!
   pre-commit
-  pre-commit-jscs!
   pry-rails
   rake
   rspec-rails
@@ -179,4 +173,4 @@ DEPENDENCIES
   scss_lint
 
 BUNDLED WITH
-   1.14.6
+   1.16.0
