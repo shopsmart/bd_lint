@@ -14,9 +14,10 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 group :development do
+  gem "bundler-audit", require: false
   gem "pre-commit"
+  gem "pry-rails", require: false
   gem "rspec-rails", require: false
   gem "rubocop"
   gem "scss_lint"
-  gem "pry-rails", require: false
 end

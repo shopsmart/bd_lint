@@ -17,6 +17,8 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", ">= 4.2.0"
+
+  s.add_dependency "bundler-audit"
   s.add_dependency "pre-commit"
   s.add_dependency "rubocop"
   s.add_dependency "scss_lint"
