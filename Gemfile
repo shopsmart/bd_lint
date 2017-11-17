@@ -14,6 +14,7 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 group :development do
+  gem "brakeman", require: false
   gem "bundler-audit", require: false
   gem "pre-commit"
   gem "pry-rails", require: false

@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", ">= 4.2.0"
 
+  s.add_dependency "brakeman"
   s.add_dependency "bundler-audit"
   s.add_dependency "pre-commit"
   s.add_dependency "rubocop"
