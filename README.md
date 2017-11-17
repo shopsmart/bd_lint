@@ -10,7 +10,6 @@ Add this line to your application's Gemfile:
 ```ruby
 group :development do
   gem 'bd_lint'
-  gem "pre-commit-jscs", github: "shopsmart/pre-commit-jscs", tag: "vx.x.x", require: false
 end
 ```
 
@@ -33,7 +32,7 @@ $ gem install bd_lint
 
 If you wish to run checks without commiting you can run the following
 ```bash
-$ rake bd_lint:rvm_check
+$ rake bd_lint:run
 ```
 
 The command ensures checks will run on RMV

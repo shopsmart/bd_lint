@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bd_lint (0.1.1)
+    bd_lint (0.1.2)
       pre-commit
       rails (>= 4.2.0)
       rubocop
