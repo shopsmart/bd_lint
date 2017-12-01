@@ -20,7 +20,7 @@ describe PreCommit::Configuration::Providers::Bd do
 
   describe "config paths" do
     let(:config) { subject.instance_variable_get(:@config) }
-    let(:relative_path) { "bd_lint/lib/generators/source_files/templates" }
+    let(:relative_path) { "bd_lint/lib/generators/lint_configs/templates" }
 
     describe "jscsrc" do
       it 'returns the gems config if one is not found in the apps root' do

@@ -1,14 +1,14 @@
 require "rails_helper"
 require "fileutils"
 require "rails/generators"
-require "generators/source_files/source_files_generator"
+require "generators/lint_configs/lint_configs_generator"
 
-describe SourceFilesGenerator do
-  let(:source_files) { %w[.jscsrc .rubocop.yml .scss-lint.yml] }
+describe LintConfigsGenerator do
+  let(:lint_configs) { %w[.jscsrc .rubocop.yml .scss-lint.yml] }
 
-  describe "#create_source_files" do
+  describe "#copy_lint_configs" do
     after do
-      source_files.map do |sf|
+      lint_configs.map do |sf|
         FileUtils.rm Rails.root.join(sf)
       end
     end
@@ -19,7 +19,7 @@ describe SourceFilesGenerator do
       files      = Dir[Rails.root.join(".*")]
       file_names = files.map{ |f| f.split("/").pop }
 
-      expect(file_names).to include(*source_files)
+      expect(file_names).to include(*lint_configs)
     end
   end
 end

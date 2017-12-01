@@ -6,12 +6,12 @@ require "generators/pre_commit/pre_commit_generator"
 describe PreCommitGenerator do
   let(:destination) { ".git/hooks/pre-commit" }
 
-  describe "#create_source_files" do
+  describe "#copy_pre_commit" do
     after do
       FileUtils.rm Rails.root.join(destination)
     end
 
-    it "creates all the source files" do
+    it "creates the pre-commit git hook" do
       subject.invoke_all
       file = Dir[Rails.root.join(destination)]
       expect(file).to be_present

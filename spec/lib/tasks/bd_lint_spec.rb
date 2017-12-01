@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "bd_lint:run" do
+describe "bd_lint:check" do
   include_context "rake"
 
   it 'calls the runner' do
