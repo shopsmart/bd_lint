@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency "bundler-audit"
   s.add_dependency "pre-commit"
   s.add_dependency "rubocop"
+  s.add_dependency "rubocop-rspec"
   s.add_dependency "scss_lint"
 
   s.add_development_dependency "rake"
