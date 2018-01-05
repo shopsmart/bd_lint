@@ -13,6 +13,9 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
+gem "rails"
+gem "rspec/rails"
+
 group :development do
   gem "brakeman", require: false
   gem "bundler-audit", require: false
