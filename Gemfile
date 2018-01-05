@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
 # Declare your gem's dependencies in bd_lint.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
@@ -13,8 +13,10 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem "rails", require: false
-gem "rspec-rails", require: false
+group :development, :test do
+  gem "rails", require: false
+  gem "rspec-rails", require: false
+end
 
 group :development do
   gem "brakeman", require: false
