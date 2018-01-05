@@ -21,7 +21,8 @@ namespace :bd_lint do
 
       desc "Generate Linter Source Files"
       task :lint_configs do
-        BdLint::Generators.lint_configs
+        ARGV.shift
+        BdLint::Generators.lint_configs(*ARGV)
       end
     end
   end
