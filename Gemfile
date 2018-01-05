@@ -13,8 +13,8 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem "rails"
-gem "rspec/rails"
+gem "rails", require: false
+gem "rspec-rails", require: false
 
 group :development do
   gem "brakeman", require: false
