@@ -8,3 +8,4 @@ class PreCommitGenerator < Rails::Generators::Base
     chmod(DESTINATION, 0755)
   end
 end
+

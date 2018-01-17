@@ -16,11 +16,16 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", ">= 4.2.0"
+
+  s.add_dependency "brakeman"
+  s.add_dependency "bundler-audit"
+  s.add_dependency "execjs"
   s.add_dependency "pre-commit"
   s.add_dependency "rubocop"
+  s.add_dependency "rubocop-rspec"
   s.add_dependency "scss_lint"
+  s.add_dependency "thor"
 
   s.add_development_dependency "rake"
-  s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "rspec"
 end

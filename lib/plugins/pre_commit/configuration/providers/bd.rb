@@ -7,7 +7,7 @@ module PreCommit
       class Bd
         include PreCommit::Configuration::TopLevel
 
-        SOURCE_FILES_PATH = "../../../../../generators/source_files/templates/".freeze
+        SOURCE_FILES_PATH = "../../../../../generators/lint_configs/templates/".freeze
 
         DEFAULTS =
           {

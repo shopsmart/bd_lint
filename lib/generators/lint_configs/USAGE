@@ -2,7 +2,7 @@ Description:
     Adds jscs, rubocop, and scss-lint config files to your rails app
 
 Example:
-    rails generate source_files
+    rails generate lint_configs
 
     This will create:
         .jscsrc
