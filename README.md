@@ -20,7 +20,11 @@ $ bundle
 
 Add this line to the top of you `Rakefile` to expose rake tasks
 ```ruby
-require "bd_lint/rake_tasks"
+$ begin
+  "bd_lint/rake_tasks"
+rescue LoadError
+  puts "BD Lint Not Loaded"
+end
 ```
 
 ### Generate Pre-commit Hooks (IMPORTANT!)
