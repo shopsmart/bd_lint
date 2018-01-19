@@ -29,4 +29,4 @@ AmbiguousBlockAssociation:
 ######################################## RSpec Specific #############################################
 
 RSpec/NestedGroups:
-  MaxNesting: 4
+  Max: 4
