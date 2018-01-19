@@ -25,3 +25,10 @@ Style/TrailingBlankLines:
 
 AmbiguousBlockAssociation:
   Enabled: false
+
+# Ignore These paths when checking for block lengths since DSLs are still ok in ruby style guide
+Style/BlockLength:
+  Exclude:
+    - "Rakefile"
+    - "**/*.rake"
+    - "spec/**/*.rb"
