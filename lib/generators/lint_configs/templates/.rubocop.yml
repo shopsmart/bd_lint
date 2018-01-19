@@ -25,3 +25,8 @@ Style/TrailingBlankLines:
 
 AmbiguousBlockAssociation:
   Enabled: false
+
+######################################## RSpec Specific #############################################
+
+RSpec/NestedGroups:
+  MaxNesting: 4
