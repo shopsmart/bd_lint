@@ -29,6 +29,7 @@ AmbiguousBlockAssociation:
 # Ignore These paths when checking for block lengths since DSLs are still ok in ruby style guide
 Style/BlockLength:
   Exclude:
+    - "config/routes.rb"
     - "Rakefile"
     - "**/*.rake"
     - "spec/**/*.rb"
