@@ -20,7 +20,7 @@ Documentation:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-Style/TrailingBlankLines:
+Layout/TrailingBlankLines:
   Enabled: true
 
 AmbiguousBlockAssociation:
