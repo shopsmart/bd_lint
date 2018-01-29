@@ -1,7 +1,7 @@
 require: rubocop-rspec
 
 LineLength:
-  Max: 100
+  Max: 120
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
