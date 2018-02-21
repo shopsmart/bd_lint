@@ -34,6 +34,11 @@ Style/BlockLength:
     - "**/*.rake"
     - "spec/**/*.rb"
 
+# Allow shorthand multi-line lambdas to prevent the need for wrapping parentheses on long form multi-line lambda
+Style/Lambda:
+  EnforcedStyle: literal
+
+
 ######################################## RSpec Specific #############################################
 
 RSpec/NestedGroups:
