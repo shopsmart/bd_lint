@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/765a8008543a6d0293df/maintainability)](https://codeclimate.com/github/shopsmart/bd_lint/maintainability)
+
 # BdLint
 Short description and motivation.
 
