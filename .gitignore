@@ -13,3 +13,6 @@ mkmf.log
 
 # Ignore Cucumber Re-run
 rerun.txt
+
+# Coverage
+test_app/coverage/
