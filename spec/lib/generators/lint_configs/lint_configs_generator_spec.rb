@@ -17,7 +17,7 @@ describe LintConfigsGenerator do
       subject.invoke_all
 
       files      = Dir[Rails.root.join(".*")]
-      file_names = files.map{ |f| f.split("/").pop }
+      file_names = files.map { |f| f.split("/").pop }
 
       expect(file_names).to include(*lint_configs)
     end
