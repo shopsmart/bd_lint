@@ -43,7 +43,7 @@ module PreCommit
           custom_config_path = File.join(top_level, filename)
 
           # Return this custom config if it exists
-          return custom_config_path if File.exists?(custom_config_path)
+          return custom_config_path if File.exist?(custom_config_path)
 
           # Return base file if custom one is not located
           File.expand_path(File.join(SOURCE_FILES_PATH, filename), __FILE__)
