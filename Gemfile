@@ -16,6 +16,7 @@ gemspec
 group :development, :test do
   gem "rails", require: false
   gem "rspec-rails", require: false
+  gem "simplecov", require: false, group: :test
 end
 
 group :development do

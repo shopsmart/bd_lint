@@ -1,3 +1,7 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/765a8008543a6d0293df/maintainability)](https://codeclimate.com/github/shopsmart/bd_lint/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/765a8008543a6d0293df/test_coverage)](https://codeclimate.com/github/shopsmart/bd_lint/test_coverage)
+[![Build Status](https://travis-ci.org/shopsmart/bd_lint.svg?branch=master)](https://travis-ci.org/shopsmart/bd_lint)
+
 # BdLint
 Short description and motivation.
 
