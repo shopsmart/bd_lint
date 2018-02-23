@@ -17,7 +17,6 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
 
-  s.add_dependency "ast", "~> 2.4"
   s.add_dependency "brakeman"
   s.add_dependency "bundler-audit"
   s.add_dependency "execjs"
