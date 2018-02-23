@@ -14,7 +14,7 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 group :development, :test do
-  gem "ast"
+  gem "ast", "~> 2.4"
   gem "rails", require: false
   gem "rspec-rails", require: false
   gem "simplecov", require: false, group: :test
