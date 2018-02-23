@@ -12,9 +12,9 @@ module PreCommit
         DEFAULTS =
           {
             checks_remove: %i[],
-            checks_add: %i[console_log debugger jscs json pry ruby_symbol_hashrockets scss_lint tabs yaml],
+            checks_add: %i[console_log debugger jscs json pry scss_lint tabs yaml],
             warnings_remove: %i[],
-            warnings_add: %i[rubocop]
+            warnings_add: %i[rubocop ruby_symbol_hashrockets]
           }.freeze
 
         def self.priority
