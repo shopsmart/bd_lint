@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     bd_lint (0.2.1)
+      ast
       brakeman
       bundler-audit
       execjs
