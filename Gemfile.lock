@@ -190,6 +190,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ast
   bd_lint!
   brakeman
   bundler-audit
