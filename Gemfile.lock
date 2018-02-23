@@ -189,9 +189,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ast (~> 2.4)
   bd_lint!
-  brakeman (~> 4.2)
+  brakeman
   bundler-audit
   execjs
   pre-commit
