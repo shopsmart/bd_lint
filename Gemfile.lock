@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bd_lint (0.2.1.4)
+    bd_lint (0.2.2)
       brakeman
       bundler-audit
       execjs
@@ -206,4 +206,4 @@ DEPENDENCIES
   thor
 
 BUNDLED WITH
-   1.16.0
+   1.16.1

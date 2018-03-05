@@ -6,6 +6,8 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "action_view/railtie"
 require "sprockets/railtie"
+# Prevents test from not running
+require "rake"
 # require "rails/test_unit/railtie"
 
 Bundler.require(*Rails.groups)
