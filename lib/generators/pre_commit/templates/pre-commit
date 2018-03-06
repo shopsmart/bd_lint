@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # This hook has a focus on portability.
 # This hook will attempt to setup your environment before running checks.
