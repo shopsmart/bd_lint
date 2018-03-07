@@ -1,7 +1,7 @@
+require "mkmf"
+
 module BdLint
   class RvmVersion
-    require "mkmf"
-
     def self.check
       if MakeMakefile.find_executable("rvm")
         rvm_current = %x(rvm current).chomp
