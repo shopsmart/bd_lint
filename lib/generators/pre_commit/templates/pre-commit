@@ -24,7 +24,7 @@ cmd=`git config pre-commit.ruby 2>/dev/null`
 if   test -n "${cmd}"
 then true
 elif which rvm   >/dev/null 2>/dev/null
-then cmd="bundle exec rvm default do ruby"
+then cmd="rvm current do ruby"
 elif which rbenv >/dev/null 2>/dev/null
 then cmd="rbenv exec ruby"
 else cmd="bundle exec ruby"
