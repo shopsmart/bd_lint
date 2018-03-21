@@ -24,8 +24,6 @@ group :development do
   gem "bundler-audit", require: false
   gem "execjs"
   gem "pre-commit"
-  # gem "pry-rails", require: false
-  # gem "rspec-rails", require: false
   gem "pry"
   gem "rspec"
   gem "rubocop"
