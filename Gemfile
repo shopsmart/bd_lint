@@ -25,7 +25,6 @@ group :development do
   gem "execjs"
   gem "pre-commit"
   gem "pry"
-  gem "rspec"
   gem "rubocop"
   gem "rubocop-rspec"
   gem "scss_lint"
