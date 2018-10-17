@@ -12,17 +12,15 @@ namespace :bd_lint do
     BdLint::RvmVersion.check
   end
 
-  unless defined?(Rails)
-    namespace :setup do
-      desc "Install application config files"
-      task :app do
-        BdLint::Generators.lint_configs
-      end
+  namespace :setup do
+    desc "Install application config files"
+    task :app do
+      BdLint::Generators.lint_configs
+    end
 
-      desc "Setup developer local environment"
-      task :local do
-        BdLint::Generators.pre_commit
-      end
+    desc "Setup developer local environment"
+    task :local do
+      BdLint::Generators.pre_commit
     end
   end
 end

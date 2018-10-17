@@ -4,8 +4,7 @@ Changes:
 
   - Changed `Style/BlockLength` to `Metrics`
   - Added CHANGELOG.md
-  - Added post install message for gem
-  - Updated readme with `Setup` section
+  - Added post install message for gem for developers and gem maintainers
 
 Bugfixes:
 
@@ -14,4 +13,6 @@ Bugfixes:
 
 Documentation:
 
-  - Updated README with `Setup` section
+  - Updated README with `Application Setup` section for updating and installing the gem
+  - Updated README with `Local Developer Setup` section all developers
+  - Change README to reference only rake tasks
