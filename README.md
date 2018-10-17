@@ -22,8 +22,9 @@ And then execute:
 $ bundle
 ```
 
-## Setup
-Add this line to the top of you `Rakefile` to expose rake tasks
+## Application Setup
+
+Expose the gems Rake tasks to the application
 ```ruby
 begin
   require "bd_lint/rake_tasks"
@@ -32,37 +33,27 @@ rescue LoadError
 end
 ```
 
-### Generate Pre-commit Hooks (IMPORTANT!)
+Install/Update bd lint config:
+```bash
+$ bundle exec rake bd_lint:setup:app
+```
+
+## Local Developer Setup
 
 Ruby on Rails
 ```bash
-$ rails g pre_commit
+$ bundle exec rake bd_lint:setup:local
 ```
 
-Rack or Sinatra
-```bash
-$ rake bd_lint:generate:pre_commit
-```
+## Additional Commands
 
-### Generate Lint Config Files
-
-Ruby on Rails
-```bash
-$ rails g lint_configs
-```
-
-Rack or Sinatra
-```bash
-$ rake bd_lint:generate:lint_configs
-```
-
-## Manually Run Linter
-
+#### Evaluate Changes Manually
 If you wish to run checks without commiting you can run the following
 ```bash
-$ rake bd_lint:run
+$ rake bd_lint:check
 ```
 
+#### If you are using RVM and your install is not working
 The command ensures checks will run on RMV
 ```bash
 $ rake bd_lint:rvm_check

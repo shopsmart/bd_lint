@@ -16,7 +16,6 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-
   s.add_dependency "brakeman"
   s.add_dependency "bundler-audit"
   s.add_dependency "execjs"
@@ -27,4 +26,15 @@ Gem::Specification.new do |s|
   s.add_dependency "thor"
 
   s.add_development_dependency "rake"
+
+  s.post_install_message = %q{
+    For all developers
+    Please see https://github.com/shopsmart/bd_lint#local-developer-setup
+    for a complete list of steps to get your local environment setup
+
+    If you are installing/updating this gem
+    Please see https://github.com/shopsmart/bd_lint#installation
+
+    For details on this specific release, refer to the CHANGELOG file.
+}
 end

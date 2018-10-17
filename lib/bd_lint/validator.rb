@@ -3,7 +3,7 @@ module BdLint
     GIT_HOOK_PATH = ".git/hooks/pre-commit".freeze
 
     def self.check
-      puts "\n\n\e[31mPlease run `bundle exec #{message}`\e[0m\n\n" if invalid?
+      puts "\n\n\e[31mLocal setup incomplete. Please run `bundle exec #{message}`\e[0m\n\n" if invalid?
     end
 
     def self.invalid?
