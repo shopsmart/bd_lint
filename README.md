@@ -22,6 +22,7 @@ And then execute:
 $ bundle
 ```
 
+## Setup
 Add this line to the top of you `Rakefile` to expose rake tasks
 ```ruby
 begin
@@ -55,14 +56,7 @@ Rack or Sinatra
 $ rake bd_lint:generate:lint_configs
 ```
 
-## IMPORTANT! Re-generate lint files each time the gem is upgraded
-
-Or install it yourself as:
-```bash
-$ gem install bd_lint
-```
-
-## Running linter without commiting staged changes
+## Manually Run Linter
 
 If you wish to run checks without commiting you can run the following
 ```bash
