@@ -3,10 +3,13 @@
 [![Build Status](https://travis-ci.org/shopsmart/bd_lint.svg?branch=master)](https://travis-ci.org/shopsmart/bd_lint)
 
 # BdLint
-Short description and motivation.
+This is a developer tool designed to provide a consistant format for the Brad's Deals code base. It also adds checks for common issues like leaving debugging declarations in the code.The linter cover the following.
 
-## Usage
-How to use my plugin.
+- Javascript ES5* (ES6 Coming Soon)
+- JSON
+- Ruby & Ruby on Rails
+- SCSS & CSS
+- YAML
 
 ## Installation
 Add this line to your application's Gemfile:
@@ -23,8 +26,7 @@ $ bundle
 ```
 
 ## Application Setup
-
-Expose the gems Rake tasks to the application
+Add this snippet to the apps `./Rakefile` **If the app is NOT rails**
 ```ruby
 begin
   require "bd_lint/rake_tasks"
@@ -39,8 +41,7 @@ $ bundle exec rake bd_lint:setup:app
 ```
 
 ## Local Developer Setup
-
-Ruby on Rails
+Install pre-commit on your local copy of the application
 ```bash
 $ bundle exec rake bd_lint:setup:local
 ```
