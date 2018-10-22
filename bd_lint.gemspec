@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
     for a complete list of steps to get your local environment setup
 
     If you are installing/updating this gem
-    Please see https://github.com/shopsmart/bd_lint#installation
+    Please see https://github.com/shopsmart/bd_lint#application-setup
 
     For details on this specific release, refer to the CHANGELOG file.
 }
