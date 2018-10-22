@@ -12,18 +12,15 @@ namespace :bd_lint do
     BdLint::RvmVersion.check
   end
 
-  unless defined?(Rails)
-    namespace :generate do
-      desc "Generate Pre-Commit Git Hook"
-      task :pre_commit do
-        BdLint::Generators.pre_commit
-      end
+  namespace :setup do
+    desc "Install application config files"
+    task :app do
+      BdLint::Generators.lint_configs
+    end
 
-      desc "Generate Linter Source Files"
-      task :lint_configs do
-        ARGV.shift
-        BdLint::Generators.lint_configs(*ARGV)
-      end
+    desc "Setup developer local environment"
+    task :local do
+      BdLint::Generators.pre_commit
     end
   end
 end

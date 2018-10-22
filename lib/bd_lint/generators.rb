@@ -1,5 +1,5 @@
-require "generators/pre_commit/pre_commit_generator_basic"
 require "generators/lint_configs/lint_configs_generator_basic"
+require "generators/pre_commit/pre_commit_generator_basic"
 
 module BdLint
   class Generators

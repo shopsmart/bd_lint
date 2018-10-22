@@ -3,10 +3,13 @@
 [![Build Status](https://travis-ci.org/shopsmart/bd_lint.svg?branch=master)](https://travis-ci.org/shopsmart/bd_lint)
 
 # BdLint
-Short description and motivation.
+This is a developer tool designed to provide a consistant format for the Brad's Deals code base. It also adds checks for common issues like leaving debugging declarations in the code.The linter cover the following.
 
-## Usage
-How to use my plugin.
+- Javascript ES5* (ES6 Coming Soon)
+- JSON
+- Ruby & Ruby on Rails
+- SCSS & CSS
+- YAML
 
 ## Installation
 Add this line to your application's Gemfile:
@@ -22,7 +25,8 @@ And then execute:
 $ bundle
 ```
 
-Add this line to the top of you `Rakefile` to expose rake tasks
+## Application Setup
+Add this snippet to the apps `./Rakefile` **If the app is NOT rails**
 ```ruby
 begin
   require "bd_lint/rake_tasks"
@@ -31,44 +35,26 @@ rescue LoadError
 end
 ```
 
-### Generate Pre-commit Hooks (IMPORTANT!)
-
-Ruby on Rails
+Install/Update bd lint config:
 ```bash
-$ rails g pre_commit
+$ bundle exec rake bd_lint:setup:app
 ```
 
-Rack or Sinatra
+## Local Developer Setup
+Install pre-commit on your local copy of the application
 ```bash
-$ rake bd_lint:generate:pre_commit
+$ bundle exec rake bd_lint:setup:local
 ```
 
-### Generate Lint Config Files
+## Additional Commands
 
-Ruby on Rails
-```bash
-$ rails g lint_configs
-```
-
-Rack or Sinatra
-```bash
-$ rake bd_lint:generate:lint_configs
-```
-
-## IMPORTANT! Re-generate lint files each time the gem is upgraded
-
-Or install it yourself as:
-```bash
-$ gem install bd_lint
-```
-
-## Running linter without commiting staged changes
-
+#### Evaluate Changes Manually
 If you wish to run checks without commiting you can run the following
 ```bash
-$ rake bd_lint:run
+$ rake bd_lint:check
 ```
 
+#### If you are using RVM and your install is not working
 The command ensures checks will run on RMV
 ```bash
 $ rake bd_lint:rvm_check
