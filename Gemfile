@@ -14,9 +14,11 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 group :development, :test do
+  gem "ffi", "~> 1.9.24"
   gem "rails", require: false
   gem "rspec-rails", require: false
   gem "simplecov", require: false, group: :test
+  gem "sprockets", "~> 3.7.2"
 end
 
 group :development do
