@@ -69,7 +69,7 @@ GEM
     docile (1.1.5)
     erubi (1.7.1)
     execjs (2.7.0)
-    ffi (1.9.18)
+    ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (1.1.1)
@@ -201,6 +201,7 @@ DEPENDENCIES
   brakeman
   bundler-audit
   execjs
+  ffi (~> 1.9.24)
   pre-commit
   pry
   rails
@@ -211,6 +212,7 @@ DEPENDENCIES
   rubocop-rspec
   scss_lint
   simplecov
+  sprockets (~> 3.7.2)
   thor
 
 BUNDLED WITH
