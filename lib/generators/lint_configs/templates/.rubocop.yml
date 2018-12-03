@@ -38,6 +38,8 @@ Metrics:
 Style/Lambda:
   EnforcedStyle: literal
 
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
 
 ######################################## RSpec Specific #############################################
 
