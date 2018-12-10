@@ -46,6 +46,19 @@ Install pre-commit on your local copy of the application
 $ bundle exec rake bd_lint:setup:local
 ```
 
+## Bundle Audit Issues
+If you are trying to merge or push a change out and temporarily ignore bundle audit, you can disable it by performing the following steps.
+
+1. Vist your Travis builds Repository
+2. Click `More options` / `Settings`
+3. Go to the `Environment Variables` section
+4. Add `DISABLE_BUNDLE_AUDIT` with a value of `true`
+5. Re-run your travis build
+6. After your build completes successfully remove the variable from Travis
+
+#### Note
+If you are merging a pull requests and deploying to staging wait until after your code is deployed before removing the variable from Travis.
+
 ## Additional Commands
 
 #### Evaluate Changes Manually
