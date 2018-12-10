@@ -73,7 +73,7 @@ The command ensures checks will run on RMV
 $ bundle exec rake bd_lint:rvm_check
 ```
 
-Check an application for known security vulnerabilities in its Gems can be done by running the following
+Check an application for known security vulnerabilities in its Gems by running the following
 ```bash
 $ bundle exec rake bd_lint:audit
 ```
