@@ -64,13 +64,18 @@ If you are merging a pull requests and deploying to staging wait until after you
 #### Evaluate Changes Manually
 If you wish to run checks without commiting you can run the following
 ```bash
-$ rake bd_lint:check
+$ bundle exec rake bd_lint:check
 ```
 
 #### If you are using RVM and your install is not working
 The command ensures checks will run on RMV
 ```bash
-$ rake bd_lint:rvm_check
+$ bundle exec rake bd_lint:rvm_check
+```
+
+Check an application for known security vulnerabilities in its Gems can be done by running the following
+```bash
+$ bundle exec rake bd_lint:audit
 ```
 
 ## Contributing
