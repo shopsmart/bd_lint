@@ -12,6 +12,21 @@ namespace :bd_lint do
     BdLint::RvmVersion.check
   end
 
+  begin
+    require "bd_lint/audit/cli"
+
+    desc "Audit Application For Security Vulnerabilities"
+    task :audit do
+      %w(update check).each do |command|
+        BdLint::Audit::CLI.start [command]
+      end
+    end
+
+    task default: "bd_lint:audit"
+  rescue LoadError
+    puts "Bundle Audit Gem not loaded. Nothing to do"
+  end
+
   namespace :setup do
     desc "Install application config files"
     task :app do
