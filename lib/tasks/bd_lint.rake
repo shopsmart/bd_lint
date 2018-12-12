@@ -21,8 +21,6 @@ namespace :bd_lint do
         BdLint::Audit::CLI.start [command]
       end
     end
-
-    task default: "bd_lint:audit"
   rescue LoadError
     puts "Bundle Audit Gem not loaded. Nothing to do"
   end
@@ -39,3 +37,6 @@ namespace :bd_lint do
     end
   end
 end
+
+# Make audit a default task if defined
+task default: "bd_lint:audit" if Rake::Task.task_defined?("bd_lint:audit")
