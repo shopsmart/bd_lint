@@ -12,7 +12,7 @@ module BdLint
       def check
         if ENV["DISABLE_BUNDLE_AUDIT"]
           DISABLED_WARNING.each { |msg| say msg, :yellow }
-          exit 0
+          return
         end
 
         super
