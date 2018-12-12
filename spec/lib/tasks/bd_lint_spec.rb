@@ -23,6 +23,8 @@ end
 describe "bd_lint:audit" do
   include_context "rake"
 
+  let(:default_task) { Rake::Task.tasks.find { |t| t.name.eql?("default") } }
+
   it "calls update" do
     expect_any_instance_of(BdLint::Audit::CLI).to receive(:update)
     subject.invoke
@@ -34,9 +36,13 @@ describe "bd_lint:audit" do
   end
 
   it "scans Gemfile.lock" do
-      expect_any_instance_of(Bundler::Audit::Scanner).to receive(:scan).and_call_original
-      subject.invoke
-    end
+    expect_any_instance_of(Bundler::Audit::Scanner).to receive(:scan).and_call_original
+    subject.invoke
+  end
+
+  it "is part of the default rake tasks" do
+    expect(default_task.prerequisite_tasks.map(&:name)).to include "bd_lint:audit"
+  end
 
   context "when the DISABLE_BUNDLE_AUDIT is set" do
     before do
