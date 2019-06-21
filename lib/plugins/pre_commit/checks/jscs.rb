@@ -17,8 +17,8 @@ module PreCommit
       def call(staged_files)
         return 'JSCS executable could not be located' if jscs_source.nil?
 
-        # Check for .js files
-        staged_files = staged_files.grep(/\.js$/)
+        # Check for .js files NOT in the Webpack Pipeline
+        staged_files = staged_files.grep(/.+(?!packs).+\.js$/)
         return if staged_files.empty?
         result = in_groups(staged_files).map do |files|
           run_check(files)
