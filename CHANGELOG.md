@@ -1,3 +1,15 @@
+## v0.4.0
+
+Changes:
+
+  - Adds ESLint support with ES6 capabilities and AirBnB rules
+
+Documentation:
+
+  - Updated README with `Application Setup` section for updating and installing the gem
+  - Updated README with `Local Developer Setup` section all developers
+  - Change README to reference only rake tasks
+
 ## v0.3.0
 
 Changes:

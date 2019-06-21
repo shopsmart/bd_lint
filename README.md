@@ -5,7 +5,7 @@
 # BdLint
 This is a developer tool designed to provide a consistant format for the Brad's Deals code base. It also adds checks for common issues like leaving debugging declarations in the code.The linter cover the following.
 
-- Javascript ES5* (ES6 Coming Soon)
+- Javascript ES5 & ES6 suppory
 - JSON
 - Ruby & Ruby on Rails
 - SCSS & CSS
