@@ -7,18 +7,17 @@ require "find"
 
 module PreCommit
   module Checks
-    class Jscs < Shell
+    class Eslint < Shell
       include PreCommit::Configuration::TopLevel
 
       def self.description
-        'Support for jscs linting'
+        'Support for eslint linting'
       end
 
       def call(staged_files)
-        return 'JSCS executable could not be located' if jscs_source.nil?
-
-        # Check for .js files NOT in the Webpack Pipeline
-        staged_files = staged_files.grep(/^((?!\/packs\/).)+\.js$/)
+        return 'ESLint executable could not be located' if eslint_source.nil?
+        # Check for .js files in the Webpack Pipeline
+        staged_files = staged_files.grep(/^((?!\/javascripts\/).)+\.(js|vue)$/)
         return if staged_files.empty?
         result = in_groups(staged_files).map do |files|
           run_check(files)
@@ -28,7 +27,7 @@ module PreCommit
       end
 
       def run_check(files)
-        args = [jscs_source] + config_file_flag + files
+        args = [eslint_source] + config_file_flag + files
         execute(args)
       end
 
@@ -37,27 +36,27 @@ module PreCommit
       end
 
       def alternate_config_file
-        '.jscsrc'
+        '.eslintrc.js'
       end
 
       def node_modules_bin
         @node_modules_bin ||= File.join(self.top_level, 'node_modules', '.bin')
       end
 
-      # First look for jscs in the top_level
+      # First look for eslint in the top_level
       def app_source
         @app_source ||= begin
           return unless File.directory?(node_modules_bin)
-          Find.find(node_modules_bin) { |path| @app_source = path if path =~ /jscs$/ }
+          Find.find(node_modules_bin) { |path| @app_source = path if path =~ /eslint$/ }
         end
       end
 
-      # If jscs is not in the top_level see if its defined within the system
+      # If eslint is not in the top_level see if its defined within the system
       def sys_source
-        @sys_source ||= MakeMakefile.find_executable('jscs')
+        @sys_source ||= MakeMakefile.find_executable('eslint')
       end
 
-      def jscs_source
+      def eslint_source
         app_source || sys_source
       end
     end

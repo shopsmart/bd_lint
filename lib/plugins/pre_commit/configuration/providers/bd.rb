@@ -12,7 +12,7 @@ module PreCommit
         DEFAULTS =
           {
             checks_remove: %i[],
-            checks_add: %i[console_log debugger jscs json pry scss_lint tabs yaml],
+            checks_add: %i[console_log debugger eslint jscs json pry scss_lint tabs yaml],
             warnings_remove: %i[],
             warnings_add: %i[rubocop ruby_symbol_hashrockets]
           }.freeze
@@ -23,6 +23,7 @@ module PreCommit
 
         def initialize(defaults = nil)
           @config                      = defaults || DEFAULTS.dup
+          @config[:"eslint.config"]    = get_config_path(".eslintrc.js")
           @config[:"jscs.config"]      = get_config_path(".jscsrc")
           @config[:"rubocop.config"]   = get_config_path(".rubocop.yml")
           @config[:"scss_lint.config"] = get_config_path(".scss-lint.yml")

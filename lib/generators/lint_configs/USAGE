@@ -1,10 +1,11 @@
 Description:
-    Adds jscs, rubocop, and scss-lint config files to your rails app
+    Adds eslint, jscs, rubocop, and scss-lint config files to your rails app
 
 Example:
     rails generate lint_configs
 
     This will create:
+        .eslintrc.js
         .jscsrc
         .rubocop.yml
         .scss-lint.yml

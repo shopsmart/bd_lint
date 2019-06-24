@@ -1,6 +1,7 @@
 require "bd_lint/rvm_version"
 require "bd_lint/validator"
 require "pre-commit"
+require "plugins/pre_commit/checks/eslint"
 require "plugins/pre_commit/checks/jscs"
 require "bd_lint/railtie" if defined?(Rails)
 
