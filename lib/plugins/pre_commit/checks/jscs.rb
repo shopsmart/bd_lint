@@ -1,9 +1,9 @@
-require 'pre-commit/error_list'
-require 'pre-commit/checks/plugin'
-require 'pre-commit/configuration/top_level'
-require 'pre-commit/checks/shell'
-require 'mkmf'
-require 'find'
+require "pre-commit/error_list"
+require "pre-commit/checks/plugin"
+require "pre-commit/configuration/top_level"
+require "pre-commit/checks/shell"
+require "mkmf"
+require "find"
 
 module PreCommit
   module Checks
@@ -18,7 +18,7 @@ module PreCommit
         return 'JSCS executable could not be located' if jscs_source.nil?
 
         # Check for .js files NOT in the Webpack Pipeline
-        staged_files = staged_files.grep(/.+(?!packs).+\.js$/)
+        staged_files = staged_files.grep(/^((?!\/packs\/).)+\.js$/)
         return if staged_files.empty?
         result = in_groups(staged_files).map do |files|
           run_check(files)
