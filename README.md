@@ -59,6 +59,14 @@ If you are trying to merge or push a change out and temporarily ignore bundle au
 #### Note
 If you are merging a pull requests and deploying to staging wait until after your code is deployed before removing the variable from Travis.
 
+If a gem has an open CVE with no viable long term fix and we need to ignore it without skipping all gems set the `BUNDLE_AUDIT_IGNORE` as a comma delimited value of CVE's
+
+1. Vist your Travis builds Repository
+2. Click `More options` / `Settings`
+3. Go to the `Environment Variables` section
+4. Add `BUNDLE_AUDIT_IGNORE` with a comma delimited list of CVE's
+5. Re-run your travis build
+
 ## Additional Commands
 
 #### Evaluate Changes Manually
