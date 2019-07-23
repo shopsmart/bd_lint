@@ -15,6 +15,12 @@ module BdLint
           return
         end
 
+        # Parse ignored list
+        ignore = ENV["BUNDLE_AUDIT_IGNORE"]&.split(",")
+
+        # Merge ignored into options
+        self.options = self.options.merge(ignore: ignore)
+
         super
       end
     end

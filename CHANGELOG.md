@@ -1,3 +1,13 @@
+## v0.6.0
+
+Changes:
+
+  - Adds `BUNDLE_AUDIT_IGNORE` ENVAR to support ignoring specific CVE's
+
+Documentation:
+
+  - Updated README with `BUNDLE_AUDIT_IGNORE` section
+
 ## v0.5.0
 
 Changes:
