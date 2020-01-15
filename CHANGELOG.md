@@ -1,3 +1,10 @@
+## v0.7.0
+
+Changes:
+
+  - Lock down gem dependencies due to API changes
+  - Added additional generators for editor, browser & eslint configs
+
 ## v0.6.0
 
 Changes:
