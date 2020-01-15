@@ -8,3 +8,5 @@ end
 gem "rails", "~> 5.2.2"
 gem "bd_lint", path: "../"
 gem "rspec"
+gem "rspec-rails"
+gem "simplecov"
