@@ -1,0 +1,9 @@
+defaults
+Android >= 6
+not dead
+not IE 11
+not IE_Mob 11
+not ExplorerMobile <= 11
+iOS >= 10
+Safari >= 10
+maintained node versions

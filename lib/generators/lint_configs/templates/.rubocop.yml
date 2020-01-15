@@ -1,6 +1,6 @@
 require: rubocop-rspec
 
-LineLength:
+Layout/LineLength:
   Max: 120
 
 Style/StringLiterals:
@@ -9,7 +9,7 @@ Style/StringLiterals:
 Style/Copyright:
   Enabled: false
 
-Documentation:
+Style/Documentation :
   Enabled: false
 
 # http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/FrozenStringLiteralComment
@@ -23,11 +23,11 @@ Style/FrozenStringLiteralComment:
 Layout/TrailingBlankLines:
   Enabled: true
 
-AmbiguousBlockAssociation:
+Lint/AmbiguousBlockAssociation:
   Enabled: false
 
 # Ignore These paths when checking for block lengths since DSLs are still ok in ruby style guide
-Metrics:
+Metrics/BlockLength:
   Exclude:
     - "config/routes.rb"
     - "Rakefile"
@@ -44,4 +44,7 @@ Style/Alias:
 ######################################## RSpec Specific #############################################
 
 RSpec/NestedGroups:
-  Max: 4
+  Max: 5
+
+FactoryBot/AttributeDefinedStatically:
+  Enabled: true
