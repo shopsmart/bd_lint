@@ -4,7 +4,7 @@ require "rails/generators"
 require "generators/lint_configs/lint_configs_generator"
 
 describe LintConfigsGenerator do
-  let(:lint_configs) { %w[.eslintrc.js .jscsrc .rubocop.yml .scss-lint.yml .pre_commit.ignore] }
+  let(:lint_configs) { %w[.eslintrc.js .jscsrc .rubocop.yml .scss-lint.yml .pre_commit.ignore .browserslistrc .editorconfig] }
 
   describe "#copy_lint_configs" do
     after do

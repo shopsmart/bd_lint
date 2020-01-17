@@ -16,3 +16,5 @@ rerun.txt
 
 # Coverage
 test_app/coverage/
+
+vendor

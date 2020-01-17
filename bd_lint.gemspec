@@ -7,25 +7,28 @@ require "bd_lint/version"
 Gem::Specification.new do |s|
   s.name        = "bd_lint"
   s.version     = BdLint::VERSION
-  s.authors     = ["Eric Agnew"]
-  s.email       = ["eric@bradsdeals.com"]
+  s.authors     = ["Dev Team"]
+  s.email       = ["dev@bradsdeals.com"]
   s.homepage    = "https://www.bradsdeals.com"
-  s.summary     = "Adds essentials to rails apps"
+  s.summary     = "Adds essentials to Ruby apps"
   s.description = "BdLint adds linters, and other gems"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "brakeman"
-  s.add_dependency "bundler-audit"
+  s.add_dependency "brakeman", "~> 4"
+  s.add_dependency "bundler-audit", "~> 0.6"
   s.add_dependency "execjs"
-  s.add_dependency "pre-commit"
-  s.add_dependency "rubocop"
-  s.add_dependency "rubocop-rspec"
-  s.add_dependency "scss_lint"
+  s.add_dependency "pre-commit", "0.39.0"
+  s.add_dependency "rubocop", "0.79.0"
+  s.add_dependency "rubocop-rspec", "~> 1.37"
+  s.add_dependency "scss_lint", "0.59.0"
   s.add_dependency "thor"
 
   s.add_development_dependency "rake"
+  s.add_development_dependency "rails"
+  s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "sprockets"
 
   s.post_install_message = %q{
     For all developers
