@@ -1,3 +1,9 @@
+## v0.7.1
+Changes:
+
+  - Push Rucocop past version 0.9.0 to escape know frozen string literal bug
+
+
 ## v0.7.0
 
 Changes:
