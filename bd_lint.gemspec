@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency "bundler-audit", "~> 0.7"
   s.add_dependency "execjs"
   s.add_dependency "fasterer", "~> 0.6"
+  s.add_dependency "pre-commit", "0.39.0"
   s.add_dependency "rubocop", "~> 0.93.1"
   s.add_dependency "rubocop-rspec", "~> 1.43"
   s.add_dependency "scss_lint", "0.59.0"
