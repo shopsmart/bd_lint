@@ -35,7 +35,7 @@ branches:
       enforce_admins: false
       required_linear_history: false
       restrictions: null
-  - name: '*-base'
+  - name: '*base'
     protection:
       required_pull_request_reviews:
         required_approving_review_count: 2
