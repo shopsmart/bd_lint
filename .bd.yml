@@ -1,0 +1,5 @@
+name: bd_lint
+team: web
+type: library
+tags:
+  language: ruby
