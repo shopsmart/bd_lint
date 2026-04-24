@@ -1,0 +1,6 @@
+application: bd_lint
+
+metadata:
+  team: web
+  type: library
+  language: ruby
